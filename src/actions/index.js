@@ -174,6 +174,9 @@ import {
   SAVE_SALARY_SLIP,
   FRONT_PAGE_FORM_SUBMIT,
   CONTACT_FORM_SUBMIT,
+  CONTACT_FORM_SUBMIT_SUCCESS,
+  CONTACT_FORM_SUBMIT_FAILED,
+  HIDE_CONTACT_SNACKBAR,
   CLOSE_CUSTOMER_SNACKBAR,
   CLEAR_INVOICE_OPTIONS,
   GENERATE_INVOICE_PDF,
@@ -388,7 +391,10 @@ export const registerFormSubmitFailed = error => ({ type: SIGNUP_FORM_SUBMIT_FAI
 export const closeRegisterSnackbar = () => ({ type: CLOSE_SIGNUP_SNACKBAR })
 
 export const signupFormSubmit = (firstname, lastname, email) => ({ type: FRONT_PAGE_FORM_SUBMIT, firstname, lastname, email })
-export const contactFormSubmit = (name, phone, email, message) => ({ type: CONTACT_FORM_SUBMIT, name, phone, email, message })
+export const contactFormSubmit = () => ({ type: CONTACT_FORM_SUBMIT })
+export const contactFormSubmitSuccess = () => ({ type: CONTACT_FORM_SUBMIT_SUCCESS })
+export const contactFormSubmitFailed = () => ({ type: CONTACT_FORM_SUBMIT_FAILED })
+export const hideContactSnackbar = () => ({type: HIDE_CONTACT_SNACKBAR})
 
 export const changeAdminMenu = (value) => ({ type: CHANGE_ADMIN_MENU, value })
 export const searchAdminUsers = () => ({ type: SEARCH_ADMIN_USERS })

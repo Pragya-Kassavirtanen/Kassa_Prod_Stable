@@ -5,7 +5,7 @@ import { watchLoadProfileSaga, watchUpdateProfileSaga } from './profile.saga'
 import { watchNewCustomerSaga, watchGetCustomersSaga, watchGetCustomerByIdSaga, watchRemoveCustomerSaga, watchSaveCustomerSaga, watchCancelCustomerSaga, watchGetCustomerToAddInvoiceSaga, watchEInvoiceOperators, watchCustomerLocationChange } from './customer.saga'
 import { watchSendRegisterInfoSaga } from './register.saga'
 import { watchLoadRegisterReviewSaga } from './signup.saga'
-import { watchSendContactInfoSaga } from './contact.saga'
+import { watchSendContactInfoSaga, watchContactLocationChange } from './contact.saga'
 import {
   watchAdminInvoiceSearchSaga,
   watchAdminInvoiceExpandSaga,
@@ -100,6 +100,7 @@ export default function* rootSaga() {
     watchPasswordLocationChangeSaga(),    
     watchLoadRegisterReviewSaga(),
     watchSendContactInfoSaga(),
+    watchContactLocationChange(),
     watchChangeLanguageSaga(),
     watchResetPasswordSaga(),
     watchClearInvoiceOption(),
