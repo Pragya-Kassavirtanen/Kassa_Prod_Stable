@@ -32,7 +32,7 @@ import { watchSaveExpenseSaga, watchSaveTravellingExpenseSaga, watchGetExpenseSt
   watchChangeAllowanceDateSaga } from './expense.saga'
 import { watchLoginSaga } from './login.saga'
 import { watchChangeLanguageSaga } from './lang.saga'
-import { watchResetPasswordSaga } from './resetPassword.saga'
+import { watchResetPasswordSaga, watchResetPasswordLocationChange } from './resetPassword.saga'
 
 // Single entry point to start all sagas at once
 export default function* rootSaga() {
@@ -103,6 +103,7 @@ export default function* rootSaga() {
     watchContactLocationChange(),
     watchChangeLanguageSaga(),
     watchResetPasswordSaga(),
+    watchResetPasswordLocationChange(),
     watchClearInvoiceOption(),
     watchGenerateInvoicePDF(),
     watchSaveAndSendInvoicePDF(),

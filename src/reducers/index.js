@@ -16,6 +16,7 @@ import loginForm from './login.reducer'
 import clientReducer from './client.reducer'
 import dashboardReducer from './dashboard.reducer'
 import contactReducer from './contact.reducer'
+import resetPassword from './resetPassword.reducer'
 
 /**
  * TODO: describe this
@@ -41,7 +42,8 @@ const reducers = combineReducers({
   login: loginForm,
   client: clientReducer,
   dashboard: dashboardReducer,
-  contact: contactReducer
+  contact: contactReducer,
+  resetPassword: resetPassword
 })
 
 export default reducers

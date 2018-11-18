@@ -183,6 +183,9 @@ import {
   INVOICE_DOWNLOAD_PDF,
   SAVE_AND_SEND_INVOICE_PDF,
   RESET_PASSWORD_FORM_SUBMIT,
+  RESET_PASSWORD_SUBMIT_SUCCESS,
+  RESET_PASSWORD_SUBMIT_FAILED,
+  HIDE_RESET_PASSWORD_SNACKBAR,
   PASSWORD_UPDATE_SUCCESS,
   PASSWORD_UPDATE_FAILED,
   CLOSE_PASSWORD_SNACKBAR,
@@ -377,13 +380,19 @@ export const loadProfileFailed = error => ({ type: LOAD_PROFILE_FAILED, error })
 export const closePasswordSnackbar = () => ({type: CLOSE_PASSWORD_SNACKBAR})
 export const closeYelSnackbar = () => ({type: CLOSE_YEL_SNACKBAR})
 
-export const loginFormSubmit = (email, password) => ({ type: LOGIN_FORM_SUBMIT, email, password })
+//export const loginFormSubmit = (email, password) => ({ type: LOGIN_FORM_SUBMIT, email, password })
+
+export const loginFormSubmit = () => ({ type: LOGIN_FORM_SUBMIT })
+
 export const loginFormSubmitSuccess = () => ({ type: LOGIN_FORM_SUBMIT_SUCCESS})
 export const loginFormSubmitFailed = error => ({ type: LOGIN_FORM_SUBMIT_FAILED, error })
 export const closeLoginSnackbar = () => ({ type: CLOSE_LOGIN_SNACKBAR })
 export const setClient = (token) => ({ type: CLIENT_SET, token })
 export const unsetClient = () => ({ type: CLIENT_UNSET })
 export const resetPasswordFormSubmit = (email) => ({ type: RESET_PASSWORD_FORM_SUBMIT, email })
+export const resetPasswordSubmitSuccess = () => ({ type: RESET_PASSWORD_SUBMIT_SUCCESS })
+export const resetPasswordSubmitFailed = () => ({ type: RESET_PASSWORD_SUBMIT_FAILED })
+export const hideResetPasswordSnackbar = () => ({ type: HIDE_RESET_PASSWORD_SNACKBAR })
 
 export const registerFormSubmit = (email, firstname, lastname, password) => ({ type: SIGNUP_FORM_SUBMIT, email, firstname, lastname, password })
 export const registerFormSubmitSuccess = (result) => ({ type: SIGNUP_FORM_SUBMIT_SUCCESS, result })

@@ -3,8 +3,7 @@ import { reduxForm } from 'redux-form'
 import Contact from '../../components/website/contact.component'
 import { contactInfoValidate as validate } from '../../containers/validate'
 import {
-  contactFormSubmit,
-  hideContactSnackbar  
+  contactFormSubmit  
 } from '../../actions/index'
 
 let ContactContainer = reduxForm({
@@ -18,17 +17,15 @@ let ContactContainer = reduxForm({
 })(Contact)
 
 const mapStateToProps = state => {
-  return {    
-    showContactSnackbar: state.contact.showContactSnackbar,
-    showContactFailSnackbar: state.contact.showContactFailSnackbar
+  return {   
+    state    
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     dispatch,
-    contactFormSubmit: () => dispatch(contactFormSubmit()),
-    hideContactSnackbar: () => dispatch(hideContactSnackbar())    
+    contactFormSubmit: () => dispatch(contactFormSubmit())    
   }
 }
 
